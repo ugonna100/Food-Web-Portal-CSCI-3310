@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Slabo+27px|Vollkorn|Yellowtail" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Exo" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="effects.js"></script>
+	<link rel="stylesheet" href="style.css">
+    </head>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar" style="font-size: 1.5em;">
+	<div class="container-fluid font2">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#Dashboard" style="margin-left: -10%;">EbolaDragons</a></li>
+            </ul>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" id="navBarIcon" style="margin-left: -70%;" src="logo.png">
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li style="padding-top: 10px;">
+                    <form action="ListCartServlet" method="get">
+                        <button type="submit" name="cart" value="cart" class="buttonColor"><i class="fa fa-shopping-cart"></i> Cart</button>
+                    </form>
+                </li>
+                <li style="margin-right: -10px;">
+                    <a href="changeSettings.jsp"><i class="fa fa-cog"></i> Settings</a>
+                </li>
+                <li style="margin-right: -10px;">
+                    <a href="restSearch.jsp"><i class="fa fa-search-plus"></i> Search</a>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-sign-out"></i> Logout</a>
+                </li>
+            </ul>
+	</div>
+    </nav>
+    <body class="font2" style="overflow: auto">
+        <div class="dashboardBG" style="color: black;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 topDash" style="color: white;">
+                            <h1 style="margin-top: 180px; font-size: 1.5em;"><strong>Eat Good. Not Bad.</strong></h1>
+                            <p class="main" style="margin-bottom: 30px;">What kind of food do <strong>you</strong> want to eat?</p>
+                        <div style="margin-top: -30px; margin-bottom: 50px;">
+                            <form action="SearchRestaurantServlet" method="post">
+                                <input type="radio" name="decision" value="category" style="display: none;" checked>
+                                <input style="color: black;" id="search" type="text" name="searchBar" placeholder="Category...">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="background-color: white; padding-bottom: 20px;">
+                        <h1>Or would you like to do something else?</h1>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2">
+                            <div style="margin-bottom: 10px;">
+                                <h2>Need food? We know you're hungry.</h2>
+                                <p style="font-size: 16px;">Search a restaurant by category or name<br> and find it quick. We know you're short on time.</p>
+                            </div>
+                            <img src="resticon3.2.png" class="dashIcon">
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2">
+                            <div style="margin-bottom: 10px">
+                                <h2>Keep track of your hard-earned food.</h2>
+                                <p style="font-size: 16px;">Check your cart and stare at all that food you're buying.<br>We know its hard to keep track of it yourself.</p>
+                            </div>
+                            <img src="cartIcon2.jpg" class="dashIcon">
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2">
+                            <div style="margin-bottom: 10px;">
+                                <h2 style="padding-bottom: 35px;">Change your settings.</h2>
+                                <p style="font-size: 16px;">On a business trip?<br>Go ahead and change your settings. We've got your back.</p>
+                            </div>
+                            <img src="userIcon1.png" class="dashIcon" style="padding-top: 25px;">
+                        </div>
+                    </div>
+                    <div class="col-md-12"style="margin-bottom: -50px; color: grey;">
+                        <div class="col-md-8 col-md-offset-2" style="padding-top: 100px;">
+                            <p style="font-size: 20px;">2016 EbolaDragons Inc. All rights reserved. Bootstrap Web Design and Restaurant portal.</p>
+                            <p style="font-size: 16px;">Terms of Service   Return Policy   Privacy Policy</p>
+                            <p style="font-size: 16px;">For more information, please contact (678)466-4000. 
+                                EbolaDragons Inc. is not liable for respective food delegations and(or) pricing guidelines set by restaurants indexed and their restaurant-centric affiliations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
